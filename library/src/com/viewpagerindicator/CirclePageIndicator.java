@@ -83,7 +83,6 @@ public class CirclePageIndicator extends View implements PageIndicator {
         final int defaultFillColor = res.getColor(R.color.default_circle_indicator_fill_color);
         final int defaultOrientation = res.getInteger(R.integer.default_circle_indicator_orientation);
         final int defaultStrokeColor = res.getColor(R.color.default_circle_indicator_stroke_color);
-        final float defaultExtraSpacing = res.getDimension(R.dimen.default_circle_indicator_extra_spacing);
         final float defaultStrokeWidth = res.getDimension(R.dimen.default_circle_indicator_stroke_width);
         final float defaultRadius = res.getDimension(R.dimen.default_circle_indicator_radius);
         final boolean defaultCentered = res.getBoolean(R.bool.default_circle_indicator_centered);
@@ -103,7 +102,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
         mPaintFill.setColor(a.getColor(R.styleable.CirclePageIndicator_fillColor, defaultFillColor));
         mRadius = a.getDimension(R.styleable.CirclePageIndicator_radius, defaultRadius);
         mSnap = a.getBoolean(R.styleable.CirclePageIndicator_snap, defaultSnap);
-        mExtraSpacing = a.getDimension(R.styleable.CirclePageIndicator_extraSpacing, defaultExtraSpacing);
+        mExtraSpacing = a.getDimension(R.styleable.CirclePageIndicator_extraSpacing, 3 * mRadius);
 
         Drawable background = a.getDrawable(R.styleable.CirclePageIndicator_android_background);
         if (background != null) {
