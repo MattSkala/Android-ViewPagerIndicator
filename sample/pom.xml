@@ -40,9 +40,14 @@
 
 		<plugins>
 			<plugin>
-				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<groupId>com.simpligility.maven.plugins</groupId>
 				<artifactId>android-maven-plugin</artifactId>
 				<extensions>true</extensions>
+				<configuration>
+					<androidManifestFile>AndroidManifest.xml</androidManifestFile>
+					<resourceDirectory>res</resourceDirectory>
+					<nativeLibrariesDirectory>libs</nativeLibrariesDirectory>
+				</configuration>
 			</plugin>
 
             <plugin>
@@ -75,7 +80,7 @@
 			<build>
 				<plugins>
 					<plugin>
-						<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+						<groupId>com.simpligility.maven.plugins</groupId>
 						<artifactId>android-maven-plugin</artifactId>
 						<version>${android-maven.version}</version>
 						<inherited>true</inherited>
